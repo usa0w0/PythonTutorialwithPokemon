@@ -30,7 +30,7 @@ class Charizard(Pokemon):
     Type = ('ほのお', 'ひこう')
 
     def __init__(self, name, level):
-        display_png(Image('./Images/Charizard.GIF', format='png'))
+        display_png(Image('PythonTutorialwithPokemon/Images/Charizard.GIF', format='png'))
         super(Charizard, self).__init__(name, level)
 
         BaseHP = 78
@@ -110,7 +110,7 @@ class Venusaur(Pokemon):
     Type = ('くさ', 'どく')
 
     def __init__(self, name, level):
-        display_png(Image('./Images/Venusaur.GIF', format='png'))
+        display_png(Image('PythonTutorialwithPokemon/Images/Venusaur.GIF', format='png'))
         super(Venusaur, self).__init__(name, level)
 
         BaseHP = 80
