@@ -2,7 +2,7 @@ from random import randint
 from IPython.display import Image, display_png
 
 class Pokemon(object):
-    def __init__(self, name, level, isEnemy=False):
+    def __init__(self, name, level, isEnemy):
         self.name = name
         if isEnemy:
             print('相手は' + self.name + 'をくりだした！')
@@ -29,9 +29,9 @@ class Pokemon(object):
 class Charizard(Pokemon):
     Type = ('ほのお', 'ひこう')
 
-    def __init__(self, name, level):
+    def __init__(self, name, level, isEnemy=False):
         display_png(Image('PythonTutorialwithPokemon/Images/Charizard.GIF', format='png'))
-        super(Charizard, self).__init__(name, level)
+        super(Charizard, self).__init__(name, level, isEnemy)
 
         BaseHP = 78
         BaseAtk = 84
@@ -109,9 +109,9 @@ class Charizard(Pokemon):
 class Venusaur(Pokemon):
     Type = ('くさ', 'どく')
 
-    def __init__(self, name, level):
+    def __init__(self, name, level, isEnemy=False):
         display_png(Image('PythonTutorialwithPokemon/Images/Venusaur.GIF', format='png'))
-        super(Venusaur, self).__init__(name, level)
+        super(Venusaur, self).__init__(name, level, isEnemy)
 
         BaseHP = 80
         BaseAtk = 82
